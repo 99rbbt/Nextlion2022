@@ -9,5 +9,5 @@
 ![:)](https://user-images.githubusercontent.com/101272544/157808439-ea083a12-fedc-4366-8a1a-863e1147d6ba.png)
 
 <a href="https://www.instagram.com/jae_hyeonn_/">
-<img src="https://user-images.githubusercontent.com/101272544/158044102-ae7eb0de-a59e-456e-ab80-15235dd43a46.svg">
+<img src="https://user-images.githubusercontent.com/101272544/158044102-ae7eb0de-a59e-456e-ab80-15235dd43a46.svg" height = 120 width = 120>
 </a>
