@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'resulthtml.css'%}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="logo">
+            <h5 class="logo">Like Lion</h5>
+        </div>
+        <div class="contens">
+            <div class="textbox">
+                <p class="back">입력한 문자</p>
+                <p class="back">{{text}}</p>
+            </div>
+            <div class="result">
+                
+                <p class="back">글자수: {{total_len}}</p>
+                
+                
+                <p class="back">글자수(공백 미포함): {{no_blank_len}}</p>
+                
+                
+                <p class="back">단어수: {{words}}</p>
+                
+            </div>
+            <div class="button">
+                <p class="instruction" class="back">내용을 입력해 주세요.</p>
+                <form action="{% url 'result' %}" method="post" >{% csrf_token %}
+                    <textarea class = "box" name="text" cols="30" rows="10" ></textarea>
+                    <br>
+                    <input class="back" type="submit" value="제출">
+    
+                </form> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
