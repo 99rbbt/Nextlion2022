@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'category.css' %}">
+  </head>
+  <body>
+    <p>신재현의 Blog</p>
+    <div class="frame">
+        <h2>카테고리 목록</h2>
+        <div class="cname">
+            <ul class="cnameul">
+                <li>
+                    <a href="{% url 'category' 'Hobby' %}">Hobby</a>
+                    <div class="num">{{article_nums.hobby}} <span>articles</span></div>
+                </li>
+                <li>
+                    <a href="{% url 'category' 'Study' %}">Study</a>
+                    <div class="num">{{article_nums.study}} <span>articles</span></div>
+                </li>
+                <li>
+                    <a href="{% url 'category' 'Book' %}">Book</a>
+                    <div class="num">{{article_nums.book}} <span>articles</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="write">
+            <a href="{% url 'new' %}">글 쓰러 가기</a>
+        </div>
+    </div>
+  </body>
+</html>

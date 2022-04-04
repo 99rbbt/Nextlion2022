@@ -1,0 +1,22 @@
+*{
+    color: green;
+    background-color: black;
+}
+a:hover{
+    color:blue;
+}
+.frame{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.content,.content > p, .num, div > ul, ul> li, li > a, .num> span{
+    background-color: rgb(64, 83, 69);
+    color:aliceblue;
+}
+.content, .cname{
+    border-radius: 3px;
+    border: solid green;
+    width: 300px;
+}
