@@ -1,0 +1,82 @@
+*{
+
+}
+.frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content{
+    padding: 100px;
+    padding-top: 20px;
+    padding-bottom: 150px;
+}
+
+a:hover{
+    background-color: rgb(197, 189, 189);
+}
+
+li {
+    margin: 10px 10px;
+    border: solid 3px rgba(0, 56, 3, 0.502);
+    border-radius: 3px;
+    padding: 16px 26px;
+}
+.detail{
+    border: solid 3px rgba(0, 56, 3, 0.502);
+    border-radius: 3px;
+    padding: 10px 1px;
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.deadline{
+    border: solid 3px black;
+    border-radius: 3px;
+    padding: 5px 120px;
+}
+.title{
+    border: solid 3px black;
+    border-radius: 3px;
+    padding: 0px 172px;
+    margin: 15px;
+}
+.content >p{
+    border: solid 3px black;
+    border-radius: 3px;
+    padding: 150px;
+    padding-top: 5px;
+}
+.list{
+    border: solid 3px black;
+    border-radius: 3px;
+    padding:50px;
+    padding-top:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: bottom;
+    padding:20px;
+    border: solid 3px rgba(0, 56, 3, 0.502);
+    border-radius: 3px;
+}
+.addtitle{
+    margin: 10px;
+    
+}
+.adddate{
+    margin:10px;
+}
+.addcont{
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+}
