@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href = "{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="frame">
+        <header class="page-header">
+            <h2>Post</h2>
+        </header>
+        <div class="contents">
+            <h3>Title {{post.title}}</h3>
+            <span>views {{post.view}} </span>
+            <p>Content {{ post.content }}</p>
+        </div>
+        <a class="tool" href="{% url 'list_page' %}">go to the list</a>
+        <a class="tool" href="{% url 'edit_page' post.pk%}">edit this post</a>
+        <a class="tool" href="{% url 'delete' post.pk %}">delte this post</a>
+    </div>
+</body>
+</html>
