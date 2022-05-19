@@ -1,0 +1,47 @@
+*{
+    color: green;
+}
+.frame{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.page-header {
+    width: 800px;
+    height: 200px;
+    font-size: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tool{
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  .contents{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: solid 3px green;
+      font-size: 17.5px;
+      margin: 20px;
+      padding: 5px;
+  }
+  a:hover{
+      color:blue;
+  }
+  .post-title{
+      font-size:21px;
+      padding:5px;
+      margin:5px;
+  }

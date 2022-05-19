@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+{% endblock %}
+
+{% block title %}
+<h2>edit your post</h2>
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <label for = "title">title</label><br>
+    <input value = "{{ post.title }}" name="title">
+    <label for="content">content</label><br>
+    <textarea name="content">{{ post.content }}
+    </textarea>
+    <button type="submit">Go</button>
+</form>
+{% endblock content %}
+
+{% block btn %}
+<a class="tool" href="{% url 'list_page' %}">go to the list</a>
+<a class="tool" href="{% url 'delete' post.pk %}">delte this post</a>
+{% endblock btn %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href = "{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="frame">
+        <header class="page-header">
+            <h2>edit your post</h2>
+        </header>
+        <br>
+        <div class="contents">
+            <form method="POST">
+                {% csrf_token %}
+                <label for = "title">title</label><br>
+                <input value = "{{ post.title }}" name="title">
+                <label for="content">content</label><br>
+                <textarea name="content">{{ post.content }}
+                </textarea>
+                <button type="submit">Go</button>
+            </form>
+        </div>
+        <div class="detailbtn">
+            <a class="tool" href="{% url 'list_page' %}">go to the list</a>
+            <a class="tool" href="{% url 'delete' post.pk %}">delte this post</a>
+        </div>
+    </div>
+</body>
+</html> -->

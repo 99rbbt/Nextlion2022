@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href = "{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="frame">
+        <header class="page-header">
+            <h2>Post</h2>
+        </header>
+        <div class="contents">
+            <h3>Title {{post.title}}</h3>
+            <span>views {{post.view}} </span>
+            <p>Content {{ post.content }}</p>
+        </div>
+        <div class ="detailbtn">
+            <a class="tool" href="{% url 'list_page' %}">go to the list</a>
+            <a class="tool" href="{% url 'edit_page' post.pk%}">edit this post</a>
+            <a class="tool" href="{% url 'delete' post.pk %}">delte this post</a>
+        </div>
+        <div class = "rep">
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="content" placeholder="댓글을 입력해주세요">
+                <button type="submit">작성하기</button>
+            </form>
+
+            {% for comment in post.comments.all %}
+            <li>
+                {{comment.content}}
+                <a href="{% url 'delete-comment' post.pk comment.pk %}">삭제하기</a>
+            </li>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+{% block css %}
+{% load static %}
+{% endblock %}
+
+{% block title %}
+<h2>Post</h2>
+{% endblock %}
+
+{% block content %}
+<h3>Title {{post.title}}</h3>
+<span>views {{post.view}} </span>
+<p>Content {{ post.content }}</p>
+{% endblock content %}
+
+{% block btn %}
+<a class="tool" href="{% url 'list_page' %}">go to the list</a>
+<a class="tool" href="{% url 'edit_page' post.pk%}">edit this post</a>
+<a class="tool" href="{% url 'delete' post.pk %}">delte this post</a>
+{% endblock btn %}
+
+{% block rep %}
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="content" placeholder="댓글을 입력해주세요">
+    <button type="submit">작성하기</button>
+</form>
+
+{% for comment in post.comments.all %}
+<li>
+    {{comment.content}}
+    <a href="{% url 'delete-comment' post.pk comment.pk %}">삭제하기</a>
+</li>
+{% endfor %}
+{% endblock rep %}
+
+
+
+
+
