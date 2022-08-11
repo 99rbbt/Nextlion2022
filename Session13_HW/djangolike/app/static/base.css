@@ -27,3 +27,7 @@ a:hover {
   margin: 10px;
   box-sizing: border-box;
 }
+
+.red{
+  color : red;
+}

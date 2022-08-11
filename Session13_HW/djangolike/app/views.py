@@ -150,9 +150,11 @@ def like(request):
         post_likes = Like.objects.filter(
             post = Post.objects.get(pk=post_pk)
         )
+    
         
         response = {
             'like_count' : post_likes.count(),
+            'existing_like': existing_like.count(),
         }
 
         return HttpResponse(json.dumps(response))

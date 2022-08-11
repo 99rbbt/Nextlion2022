@@ -34,12 +34,24 @@
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
+  const likeBtn = document.getElementById("like-button");
   const like =() => {
     axios('/like', {
       method: "POST",
       data:{post_pk: "{{post.pk}}"}
     })
-    .then(res=> document.getElementById("like-count").innerHTML = "좋아요" + res.data.like_count + "개")
+    .then(res=> {
+      document.getElementById("like-count").innerHTML = "좋아요" + res.data.like_count + "개"
+
+      if(res.data.existing_like){
+        likeBtn.classList.add("red");
+      }
+      else{
+        likeBtn.classList.remove("red");
+      }
+
+    
+    })
   }
   const scrap =() => {
     axios('/scrap', {
